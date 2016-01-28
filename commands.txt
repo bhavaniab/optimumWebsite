@@ -1,1 +1,3 @@
 source newenv/bin/activate
+Commands to create superuser
+python manage.py createsuperuser
