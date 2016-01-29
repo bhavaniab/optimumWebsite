@@ -1,7 +1,8 @@
-from django.conf.urls import url
+from django.conf.urls import patterns, url
 
 from . import views
 
-urlpatterns = [
-    url(r'^$', views.index, name='index'),
-]
+
+urlpatterns = patterns('',
+    url(r'^$', views.IndexView.as_view(template_name='optimum/index.html'),name='index'),
+)
