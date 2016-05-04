@@ -1,3 +1,8 @@
+#!/bin/sh
 source newenv/bin/activate
-Commands to create superuser
+#Commands to create superuser
 python manage.py createsuperuser
+#create a static folder in optwebsite folder
+#and in settings.py add STATIC_ROOT 
+#and run the command
+python manage.py collectstatic

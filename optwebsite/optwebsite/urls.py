@@ -15,10 +15,18 @@ Including another URLconf
 """
 from django.conf.urls import patterns, include, url
 from django.contrib import admin
+admin.autodiscover()
+
+
+
 
 urlpatterns = patterns('',
     url(r'^optimum/', include('optimum.urls')),
     url(r'^admin/', admin.site.urls),
+
 )
 
-
+#urlpatterns += patterns(
+#    'django.views.generic.simple',
+#    (r'^', 'direct_to_template', {"template": "index.html"}),
+#)
